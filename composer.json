@@ -52,6 +52,9 @@
             "dont-discover": []
         }
     },
+    "platform": {
+        "php": "^8"
+    },
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

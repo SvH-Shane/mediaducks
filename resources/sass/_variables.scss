@@ -1,0 +1,57 @@
+// Body
+$body-bg: #fff; //NEW COLOR f5f5f7
+
+// Typography
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Font sizes
+$font-normal: 1rem;
+$font-title-large: 2.25rem;
+$font-title-normal: 2rem;
+$font-title-tumbnail: 1.25rem;
+$font-24: 1.5rem;
+$font-36: 2.25rem;
+$font-small: 0.875rem;
+
+$font-mob-title-large: 1.5em;
+
+// DPF Colors
+$darkBlue: #243747;
+$blackBlack: #0a0a0a;
+$orange: #f0c817;
+$green: #8bc47c;
+$red: #96281b;
+$maydayRed: #cd1719;
+
+// DPF Simple colors
+$darkBlack: #080708;
+$ThisWasBlack: #222222;
+$realBlack: #000000;
+$darkGrey: #c3c3c3;
+$deepBlack: #111111;
+$looksLikeGrey: #EEF4ED;
+$lightGrey: #E9E2DF;
+$white: #fff;
+
+// Screensizing
+$breakpoint-mobile: 368px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+
+h1 {
+	font-size: 2.813em;
+
+	@media (max-width: $breakpoint-tablet)  {
+		font-size: 2em;
+	}
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+
+}

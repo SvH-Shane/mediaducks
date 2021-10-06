@@ -1,0 +1,283 @@
+// Variables
+@import 'variables';
+@import 'elements';
+@import 'defaults';
+
+html, body {
+	font-family: $font-family-sans-serif;
+	font-weight: 300;
+	color: $darkBlack;
+	letter-spacing: normal;
+	font-size: $font-normal;
+	font-style: normal;
+	overflow-x: hidden;
+	background-color: $body-bg;
+	max-width: 1450px;
+	margin: 0 auto;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 1rem 8rem;
+	width: 100%;
+	transition: 200ms linear;
+	color: $white;
+	z-index: 99;
+
+	@media (max-width: $breakpoint-tablet)  {
+		padding: 0.10rem 1rem;
+	}
+
+	span {
+		font-size: 32px;
+		font-weight: bold;
+		box-shadow: 1px $lightGrey;
+	}
+
+	section {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&.scrolled {
+		background-color: $lightGrey;
+		box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+		padding: .5rem 8rem;
+		transition: 200ms linear;
+		color: $darkBlack;
+
+		@media (max-width: $breakpoint-tablet)  {
+			padding: 0.10rem 1rem;
+		}
+	}
+
+	section:last-of-type {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		justify-content: normal;
+		align-items: flex-start;
+		padding-top: 2rem;
+		padding-left: 5rem;
+		top: 0;
+		left: -500px;
+		width: 0vh;
+		height: 100vh;
+		z-index: 99;
+		transition: 1s;
+		background-color: $lightGrey;
+
+		li {
+			font-size: 2rem;
+			font-weight: 600;
+			line-height: 3.875rem;
+		}
+
+		.close {
+			font-size: 2rem;
+			cursor: pointer;
+		}
+
+		@media (max-width: $breakpoint-tablet)  {
+			padding-left: 2rem;
+		}
+	}
+}
+
+.main-header {
+	position: relative;
+	width: 100%;
+	height: 655px;
+	z-index: 1;
+
+	@media (max-width: $breakpoint-tablet)  {
+		height: 450px;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		margin-left: auto;
+		top: 50%;  /* position the top  edge of the element at the middle of the parent */
+	    left: 0; /* position the left edge of the element at the middle of the parent */
+	    transform: translate(0%, -50%);
+		padding: 0 8rem;
+		max-width: 80%;
+		margin: auto;
+		text-shadow: 1px 2px 10px $darkBlack;
+
+
+		@media (max-width: $breakpoint-tablet)  {
+			top: 50%;  /* position the top  edge of the element at the middle of the parent */
+		    left: 0; /* position the left edge of the element at the middle of the parent */
+		    transform: translate(0%, -50%);
+			padding: 20% 1.5rem 0;
+			max-width: 100%;
+		}
+	}
+
+	span {
+		font-size: 45px;
+		font-weight: 700;
+		color: $white;
+
+		@media (max-width: $breakpoint-tablet)  {
+			font-size: 32px;
+			font-weight: 600;
+		}
+	}
+
+	.header-bg {
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		object-fit: cover;
+		object-position: center;
+
+		@media (max-width: $breakpoint-tablet)  {
+			height: 100%;
+		}
+	}
+
+	.header__logo-client {
+		width: 150px;
+		margin: 10px 0;
+
+		@media (max-width: $breakpoint-tablet)  {
+			width: 100px;
+			margin: 10px 0;
+		}
+	}
+
+	.btn__rnd {
+		margin: 30px 0;
+	}
+}
+
+.in-short {
+	padding: 6.25rem 8rem;
+	background: $looksLikeGrey;
+	height: 650px;
+	margin-bottom: 7.25rem;
+
+	@media (max-width: $breakpoint-tablet)  {
+		padding: 4.25rem 0;
+		height: 560px;
+		margin-bottom: 4rem;
+	}
+
+	&__text {
+		max-width: 32rem;
+
+		@media (max-width: $breakpoint-tablet)  {
+			padding: 0 1.5rem;
+		}
+
+		h1 {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 2.25rem;
+
+		@media (max-width: $breakpoint-tablet)  {
+			scroll-snap-type: x mandatory;
+			overflow: scroll;
+			padding-right: 2rem;
+		}
+
+		figure {
+			position: relative;
+			width: 23rem;
+			height: 23rem;
+			overflow: hidden;
+			scroll-snap-align: center;
+
+			@media (max-width: $breakpoint-desktop) {
+				width: 20rem;
+				height: 20rem;
+			}
+
+			@media (max-width: $breakpoint-tablet)  {
+				margin-left: .75rem;
+				margin-right: .75rem;
+				width: 20rem;
+				height: 20rem;
+			}
+
+			.figure_bg {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: top;
+				transition: transform .5s;
+
+				&:hover {
+					transition: .5s;
+        			transform: scale(1.1);
+				}
+
+				@media (max-width: $breakpoint-tablet)  {
+					height: 100%;
+				}
+			}
+
+			figcaption {
+				position: absolute;
+				font-weight: bold;
+				color: $white;
+				font-size: 1.25em;
+				left: 1.5rem;
+				bottom: 1.5rem;
+				text-shadow: 1px 2px 10px $darkBlack;
+			}
+		}
+	}
+}
+
+.cta-header {
+	position: relative;
+	margin-top: 6.25rem;
+	width: 100%;
+	height: 550px;
+	overflow: hidden;
+	z-index: 5;
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		transition: transform .5s;
+	}
+	&__text {
+		position: absolute;
+		top: 6.25rem;
+		right: 10rem;
+		max-width: 410px;
+		z-index: 3;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: -5rem;
+			left: 4.5rem;
+			width: 23rem;
+			height: 23rem;
+			background: $looksLikeGrey;
+			z-index: -2;
+		}
+
+		h2 {
+			font-weight: 500;
+			margin-bottom: 2rem;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+*, *::after, *::before, a {
+    margin: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+    list-style-type: none;
+    color: inherit;
+	letter-spacing: normal;
+}
+
+/* Defaults */
+input, button, submit {
+    border:none;
+    background: none;
+	cursor: pointer;
+}
+
+ul, li, ol {
+    margin-left: 0 ;
+    padding-left: 0;
+}
+
+a {
+	text-decoration: none; /* no underline */
+	transition: .3s;
+
+	&:hover {
+		color: $white;
+	}
+}
+
+p {
+	line-height: 26px;
+}
+
+.active-modal {
+	transition: 1s;
+	left: 0 !important;
+	width: 100vw !important;
+
+	body {
+		height: 100%;
+		overflow: hidden;
+	}
+}
